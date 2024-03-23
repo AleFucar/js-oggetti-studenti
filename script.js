@@ -10,7 +10,7 @@
 //1. Creare un array di oggetti di studenti.
 //2. Ogni oggetto studente deve avere tre proprietà: nome, cognome, eta
 
-const students = [
+let students = [
     Marco = {
         nome: 'Marco',
         cognome: 'Rossi',
@@ -39,7 +39,9 @@ const students = [
         nome: 'Francesco',
         cognome: 'Donalio',
         età: '21'
-    }
+    },
+
+        empty = {}
 ]
 
 //console.log(students)
@@ -59,6 +61,48 @@ const students = [
 
 
 //5. poi commentate il ciclo for e usate il forEach
+
+/*students.forEach(function (element,index) {
+  console.log(element)   
+});*/
+
+
+
+
+/*MILESTONE 2
+1. Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+2. Aggiungere il nuovo studente all’array di studenti
+3. Ciclare su tutti gli studenti e stampare per ognuno di essi tutte le proprietà nome, cognome, eta
+4. prima ciclate con un ciclo for
+5. poi commentate il ciclo for e usate il forEach*/
+
+
+
+
+//1. Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+
+const nuovoNome = prompt("inserisci il Nome")
+//console.log(nuovoNome)
+empty.nome = nuovoNome
+const nuovoCognome = prompt("Inserisci il nuovo Cognome")
+//console.log(nuovoCognome)
+empty.cognome = nuovoCognome
+const nuovaEtà = prompt("Inserisci l'età")
+//console.log(nuovaEtà)
+empty.età = nuovaEtà
+
+
+//3. Ciclare su tutti gli studenti e stampare per ognuno di essi tutte le proprietà nome, cognome, eta
+
+//prima ciclate con un ciclo for
+
+/*for (let i = 0; i < students.length; i++) {
+    const element = students[i];
+
+    console.log(element)
+}*/
+
+//5. poi commentate il ciclo for e usate il forEach*/
 
 students.forEach(function (element,index) {
   console.log(element)   

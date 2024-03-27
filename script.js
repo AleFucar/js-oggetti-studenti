@@ -1,109 +1,77 @@
 
-/* MILESTONE 1
-1. Creare un array di oggetti di studenti.
-2. Ogni oggetto studente deve avere tre proprietà: nome, cognome, eta
-3. Ciclare su tutti gli studenti e stampare, per ognuno di essi, nome e cognome.
-4. prima ciclate con un ciclo for
-5. poi commentate il ciclo for e usate il forEach*/
+/*MILESTONE 1
+Creare un array di oggetti di studenti.
+Ogni oggetto studente deve avere tre proprietà: nome, cognome, eta.
+Ciclare su tutti gli studenti e stampare, per ognuno di essi, nome, cognome, età tramite sfruttando i componenti bootstrap(ad es.in tabella).*/
 
 
-//1. Creare un array di oggetti di studenti.
-//2. Ogni oggetto studente deve avere tre proprietà: nome, cognome, eta
 
-let students = [
-    Marco = {
+//Creo array di studenti
+const students = [
+    {
         nome: 'Marco',
         cognome: 'Rossi',
         età: '32'
     },
 
-        Chiara = {
+    {
         nome: 'Chiara',
         cognome: 'Blando',
         età: '23'
     },
 
-        Paolo = {
+    {
         nome: 'Paolo',
         cognome: 'Rossini',
         età: '36'
     },
 
-        Martina = {
+    {
         nome: 'Martina',
         cognome: 'Ronio',
         età: '29'
     },
 
-        Francesco = {
+    {
         nome: 'Francesco',
         cognome: 'Donalio',
         età: '21'
     },
 
-        empty = {}
 ]
 
-//console.log(students)
+
+//Ciclo gli studenti fino alla linmghezza dell'array e ad ogni ciclo stampo lo studente grazie alla function sotto
+for (let i = 0; i < students.length; i++) {
+    const studentsMember = students[i]
+
+    stampaStudenti(studentsMember)
+
+}
 
 
+//Creo la function che stampa ogni studente nella tabella creata nell'html 
+function stampaStudenti(studente) {
 
-/*3. Ciclare su tutti gli studenti e stampare, per ognuno di essi, nome e cognome.
-4. prima ciclate con un ciclo for*/
+    const bodyTabella = document.getElementById('stampaTabella')
 
-/*for (let i = 0; i < students.length; i++) {
-    const element = students[i];
+    const htmlStampa =
+        `
+	<tr>
+	  <td>${studente.nome}</td>
+	  <td>${studente.cognome}</td>
+	  <td>${studente.età}</td>
+	</tr>
+	`
 
-    console.log(element)
-    
-}*/
+    bodyTabella.innerHTML += htmlStampa
 
-
-
-//5. poi commentate il ciclo for e usate il forEach
-
-/*students.forEach(function (element,index) {
-  console.log(element)   
-});*/
-
+}
 
 
 
 /*MILESTONE 2
-1. Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
-2. Aggiungere il nuovo studente all’array di studenti
-3. Ciclare su tutti gli studenti e stampare per ognuno di essi tutte le proprietà nome, cognome, eta
-4. prima ciclate con un ciclo for
-5. poi commentate il ciclo for e usate il forEach*/
+Dare la possibilità all’utente di aggiungere un nuovo oggetto studente inserendo nome, cognome ed età tramite form.
+Aggiungere il nuovo studente all’array di studenti.
+Aggiornare l’interfaccia con il nuovo studente*/.
 
-
-
-
-//1. Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
-
-const nuovoNome = prompt("inserisci il Nome")
-//console.log(nuovoNome)
-empty.nome = nuovoNome
-const nuovoCognome = prompt("Inserisci il nuovo Cognome")
-//console.log(nuovoCognome)
-empty.cognome = nuovoCognome
-const nuovaEtà = prompt("Inserisci l'età")
-//console.log(nuovaEtà)
-empty.età = nuovaEtà
-
-
-//3. Ciclare su tutti gli studenti e stampare per ognuno di essi tutte le proprietà nome, cognome, eta
-
-//prima ciclate con un ciclo for
-
-/*for (let i = 0; i < students.length; i++) {
-    const element = students[i];
-
-    console.log(element)
-}*/
-
-//5. poi commentate il ciclo for e usate il forEach*/
-
-students.forEach(function (element,index) {
-  console.log(element)   
-});

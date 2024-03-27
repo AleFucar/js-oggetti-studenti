@@ -47,6 +47,7 @@ for (let i = 0; i < students.length; i++) {
 
     stampaStudenti(studentsMember)
 
+    console.log(studentsMember)
 }
 
 
@@ -73,5 +74,28 @@ function stampaStudenti(studente) {
 /*MILESTONE 2
 Dare la possibilità all’utente di aggiungere un nuovo oggetto studente inserendo nome, cognome ed età tramite form.
 Aggiungere il nuovo studente all’array di studenti.
-Aggiornare l’interfaccia con il nuovo studente*/.
+Aggiornare l’interfaccia con il nuovo studente*/
 
+
+
+const form = document.getElementById('aggiungiStudente')
+form.addEventListener('subimt', aggiungiNuovo)
+
+function aggiungiNuovo(e) {
+
+    e.preventDefault()
+
+    const nome = document.getElementById('nomeDom').value
+    const cognome = document.getElementById('cognomeDom').value
+    const età = document.getElementById('etàDom').value
+
+    const nuovoStudente = {
+        nome: nome,
+        cognome: cognome,
+        età: età,
+    }
+
+    students.push(nuovoStudente)
+
+    stampaStudenti(nuovoStudente)
+}

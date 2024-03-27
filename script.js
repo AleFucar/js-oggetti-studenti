@@ -89,6 +89,21 @@ function aggiungiNuovo(e) {
     const cognome = document.getElementById('cognomeDom').value
     const età = document.getElementById('etàDom').value
 
+    if (nome === '' || cognome === '' || età === '') {
+        stampaAlert()
+        console.log("campo vuoto")
+        return
+    } else if (nome == Number || cognome == Number) {
+        stampaAlert()
+        console.log("numeri dove non dovrebbero")
+        return
+    }
+    else {
+        stampaSuccess()
+        console.log("giusto")
+    }
+
+
     const nuovoStudente = {
         nome: nome,
         cognome: cognome,
@@ -97,4 +112,28 @@ function aggiungiNuovo(e) {
 
     students.push(nuovoStudente)
     stampaStudenti(nuovoStudente)
+}
+
+function stampaAlert() {
+    const alert = document.getElementById('alert')
+
+    const HTMLAlert =
+        `
+    <div class="alert alert-danger my-3" role="alert">
+        ${"I CAMPI SONO VUOTI O NON CORRETTAMENTE INSERITI"}
+    </div > `
+
+    alert.innerHTML = HTMLAlert
+}
+
+function stampaSuccess() {
+    const alert = document.getElementById('alert')
+
+    const HTMLAlert =
+        `
+    <div class="alert alert-success my-3" role="alert">
+        ${"STUDENTE AGGIUNTO"}
+    </div > `
+
+    alert.innerHTML = HTMLAlert
 }

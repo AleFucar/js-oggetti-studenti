@@ -79,7 +79,7 @@ Aggiornare l’interfaccia con il nuovo studente*/
 
 
 const form = document.getElementById('aggiungiStudente')
-form.addEventListener('subimt', aggiungiNuovo)
+form.addEventListener('submit', aggiungiNuovo)
 
 function aggiungiNuovo(e) {
 
@@ -96,6 +96,5 @@ function aggiungiNuovo(e) {
     }
 
     students.push(nuovoStudente)
-
     stampaStudenti(nuovoStudente)
 }

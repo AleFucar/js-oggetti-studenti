@@ -13,7 +13,7 @@
     <!-- INIZIO NAVBAR -->
     <header>
         <nav class="navbar bg-dark border-bottom border-body py-4" data-bs-theme="dark">
-            <div class="container">
+            <div class="container-fluid">
                 <span class="navbar-brand mb-0 h1">Studenti</span>
             </div>
         </nav>
@@ -57,25 +57,19 @@
                 <div class="col-6">
                     <form id="aggiungiStudente" action="">
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nomeDom"
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" name="nome" class="form-control" id="nomeDom"
                                 placeholder="Inserisci il nome dello studente">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Cognome</label>
-                            <input type="text" class="form-control" id="cognomeDom"
+                            <label for="cognome" class="form-label">Cognome</label>
+                            <input type="text" name="cognome" class="form-control" id="cognomeDom"
                                 placeholder="Inserisci il cognome dello studente">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Età</label>
-                            <input type="text" class="form-control" id="etàDom"
+                            <label for="età" class="form-label">Età</label>
+                            <input type="text" name="età" class="form-control" id="etàDom"
                                 placeholder="Inserisci l'età dello studente">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Hai controllato bene i dati
-                                prima di
-                                inserirlo definitivamente?</label>
                         </div>
                         <button class="btn btn-primary">Inserisci</button>
                     </form>
